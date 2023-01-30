@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: oxygen, sans-serif;
+    margin: 2erm;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(12erm,16erm));
+    gap: 2erm;
+    justify-content: center;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.card{
+    overflow: hidden;
+    box-shadow: 0 2px 20px grey;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+.card__body{
+    padding: 5px 5px 5px 5px;
+}
+.card__image{
+    height: 65%;
+    width: 100%;
+    object-fit:cover;
+}
+.card__title{
+    padding: 1erm;
+    text-align: center;
+}
+.card__description{
+    text-align: justify;
+}
+.card__btn{
+    padding: 1erm;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1erm;
+    height: 10%;
+    border: 2px solid rgb(1, 1, 88);
+    background: transparent;
+    color: rgb(1, 1, 88);
+    border-radius: 0px 0px 1px 1px;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+.card__btn:hover{
+    background: rgb(1, 1, 88);
+    color: white;
+}
