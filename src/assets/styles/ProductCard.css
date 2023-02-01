@@ -10,55 +10,143 @@ body{
     margin: 2erm;
 }
 .wrapper{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(12erm,16erm));
     gap: 2erm;
     justify-content: center;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
-.card{
+.product-card{
     overflow: hidden;
-    box-shadow: 0 2px 20px grey;
+    box-shadow: 0 2px 15px rgb(179, 179, 179);
     border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in;
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.card__body{
-    padding: 5px 5px 5px 5px;
+.card-container{
+    height: 98%;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3% 2% 2% 3%;
+    float: left;
 }
-.card__image{
-    height: 65%;
+.pcard-body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    height: 27%;
+}
+.image-container{
+    position: relative;
+    height: 50%;
     width: 100%;
     object-fit:cover;
 }
-.card__title{
-    padding: 1erm;
-    text-align: center;
+.card-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 15px 15px 15px;
 }
-.card__description{
+.pcard-title{
+    vertical-align: top;
+}
+
+.card-description{
     text-align: justify;
 }
-.card__btn{
+
+.card-btn{
+    position: relative;
     padding: 1erm;
     font-family: inherit;
     font-weight: bold;
     font-size: 18px;
     margin: 1erm;
-    height: 10%;
+    height: 9%;
+    width: 50%;
+    left: 25%;
     border: 2px solid rgb(1, 1, 88);
     background: transparent;
     color: rgb(1, 1, 88);
-    border-radius: 0px 0px 1px 1px;
+    border-radius: 15px 15px 15px 15px;
     transition: background 200ms ease-in, color 200ms ease-in;
+    bottom: 4px;
 }
-.card:hover{
-    transform: scale(1.02);
+/* .card:hover {
+    transform: scale(1.01);
 }
-.card__btn:hover{
+.card:hover .card-btn{
     background: rgb(1, 1, 88);
     color: white;
+} */
+
+
+.card-favourites{
+    font-size: 24px;
+    vertical-align: middle;
+}
+.card-cart{
+    position: relative;
+    float: left;
+    font-size: 27px;
+    align-self: center;
+}
+.card-more{
+    position: relative;
+    float: right;
+    font-size: 27px;
+    align-self: center;
+}
+.card-wishlist{
+    position: relative;
+    float: center;
+    font-size: 25px;
+    align-self: center;
+}
+.modal, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    pointer-events: none;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+    pointer-events: none;
+    z-index: 888;
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: white;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 400px;
+    max-height: 500px;
+    min-height: 300px;
+    z-index: 999;
+    pointer-events: all;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
 }

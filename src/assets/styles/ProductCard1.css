@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: oxygen, sans-serif;
+    margin: 2erm;
+}
+.wrapper1{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(12erm,16erm));
+    gap: 2erm;
+    justify-content: center;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+.card1{
+    overflow: hidden;
+    box-shadow: 0 2px 20px grey;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    border-radius: 10px 10px 10px 10px;
+}
+.card-body1{
+    padding: 5px 5px 5px 5px;
+}
+.image-container1{
+    position: relative;
+    height: 60%;
+    width: 100%;
+    object-fit:cover;
+}
+.card-image1{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.card-title1{
+    padding: 1erm;
+    text-align: center;
+}
+.card-description1{
+    text-align: justify;
+}
+.card-btn1{
+    position: relative;
+    padding: 1erm;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1erm;
+    height: 9%;
+    width: 50%;
+    left: 25%;
+    border: 2px solid rgb(1, 1, 88);
+    background: transparent;
+    color: rgb(1, 1, 88);
+    border-radius: 15px 15px 15px 15px;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    bottom: 4px;
+}
+.card1:hover {
+    transform: scale(1.02);
+}
+.card1:hover .card-btn1{
+    background: rgb(1, 1, 88);
+    color: white;
+}
+.overlay-text1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    height: 100%;
+    width: 100%;
+  }
+  .card1:hover .overlay-text1 {
+    height: 15%;
+    font-size: 20px;
+    background-color: rgb(1, 1, 88);
+    color: white;
+  }

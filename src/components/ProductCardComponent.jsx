@@ -1,15 +1,18 @@
 import React from 'react'
-import '../assets/styles/ProductCard.css'
+import '../assets/styles/ProductCard1.css'
 
 function ProductCardComponent({product, width, height}) {
     return (
-        <div className="card" style={{ width: `${width}px`, height: `${height}px` }}>
-        <img src={product.image} className="card__image" alt={product.name} />
-            <div className="card__body">
-                <h2 className="card__title">{product.name}</h2>
-                <p className="card__description">{product.description}</p>
+        <div className="card1" style={{ width: `${width}px`, height: `${height}px` }}>
+            <div className='image-container1'>
+                {product.showOffer && <div className="overlay-text1">{product.offer}</div>}
+                <img src={product.image} className="card-image1" alt={product.name} />
             </div>
-            <button className="card__btn">{product.btn}</button>
+            <div className="card-body1">
+                <h2 className="card-title1">{product.name}</h2>
+                <p className="card-description1">{product.description}</p>
+            </div>
+            <button className="card-btn1">{product.btn}</button>
         </div>
     )
 }
